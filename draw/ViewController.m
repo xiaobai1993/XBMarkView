@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ScorePlateView.h"
+#import "XBScorePlateView.h"
 @interface ViewController ()
 
 @end
@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-        ScorePlateView * myview = [[ScorePlateView alloc]initWithFrame:CGRectMake(40, 60, 232, 232)];
+        XBScorePlateView * myview = [[XBScorePlateView alloc]initWithFrame:CGRectMake(40, 60, 232, 232)];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:myview];
     

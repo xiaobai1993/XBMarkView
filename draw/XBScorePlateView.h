@@ -2,7 +2,7 @@
 //  MyView.h
 //  draw
 //
-//  Created by 王国栋 on 15/12/29.
+//  Created by xiaobai on 15/12/29.
 //  Copyright © 2015年 xiaobai. All rights reserved.
 //
 
@@ -14,7 +14,7 @@
      比如comments 表示的具体评价内容，comment 表示评价的具体内容，lbecomment 是一个显示 "评价："的标签
  */
 
-@interface ScorePlateView : UIView
+@interface XBScorePlateView : UIView
 
 /*速度满意度*/
 @property (nonatomic,assign) CGFloat speedValues;

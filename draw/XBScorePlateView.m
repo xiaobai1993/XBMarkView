@@ -2,13 +2,13 @@
 //  MyView.m
 //  draw
 //
-//  Created by 王国栋 on 15/12/29.
+//  Created by xiaobai on 15/12/29.
 //  Copyright © 2015年 xiaobai. All rights reserved.
 //
 
-#import "ScorePlateView.h"
+#import "XBScorePlateView.h"
 
-@interface ScorePlateView()
+@interface XBScorePlateView()
 {
     CGFloat d_speed;//执行动画时候每个的增量
     CGFloat d_altitude;
@@ -30,7 +30,7 @@
 
 @end
 
-@implementation ScorePlateView
+@implementation XBScorePlateView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
