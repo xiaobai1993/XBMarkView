@@ -213,7 +213,8 @@
     if (_cur_speedV > self.speedValues) {
         _cur_speedV=self.speedValues;
     }
-    if (_cur_compV>self.compreValues) {
+    //这里防止综合评分为负数的时候造成分数不能停
+    if (fabs(_cur_compV)>fabs(self.compreValues)) {
         _cur_compV=self.compreValues;
     }
     if ( _cur_compV==self.compreValues&&_cur_speedV==self.speedValues&&_cur_altitudeV ==self.altitudeValues) {
