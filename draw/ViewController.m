@@ -17,15 +17,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-        XBScorePlateView * myview = [[XBScorePlateView alloc]initWithFrame:CGRectMake(40, 60, 232, 232)];
+    [self one];
+
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
+//背景没有渐变
+-(void)one
+{
+    XBScorePlateView * myview = [[XBScorePlateView alloc]initWithFrame:CGRectMake(40, 60, 232, 232)];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:myview];
     
     self.view.backgroundColor = [UIColor grayColor];
 
-    // Do any additional setup after loading the view, typically from a nib.
 }
+//背景渐变的
+-(void)two
+{
+    XBScorePlateView * myview = [[XBScorePlateView alloc]initWithFrame:CGRectMake(40, 60, 232, 232)];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
 
+    [self.view addSubview:myview];
+    myview.SuperViewChange = YES;
+
+
+
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

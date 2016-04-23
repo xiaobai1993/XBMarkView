@@ -16,6 +16,8 @@
 
 @interface XBScorePlateView : UIView
 
+@property (nonatomic,assign) BOOL SuperViewChange;
+
 /*速度满意度*/
 @property (nonatomic,assign) CGFloat speedValues;
 

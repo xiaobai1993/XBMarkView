@@ -13,13 +13,6 @@
 		454897F11C32796300FFFC47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 454897EF1C32796300FFFC47 /* Main.storyboard */; };
 		454897F31C32796300FFFC47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 454897F21C32796300FFFC47 /* Assets.xcassets */; };
 		454897F61C32796300FFFC47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 454897F41C32796300FFFC47 /* LaunchScreen.storyboard */; };
-		45775AE01C338CF000433A89 /* 橙色bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45775ADA1C338CF000433A89 /* 橙色bg@2x.png */; };
-		45775AE11C338CF000433A89 /* 橙色bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45775ADB1C338CF000433A89 /* 橙色bg@3x.png */; };
-		45775AE21C338CF000433A89 /* 红色bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45775ADC1C338CF000433A89 /* 红色bg@2x.png */; };
-		45775AE31C338CF000433A89 /* 红色bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45775ADD1C338CF000433A89 /* 红色bg@3x.png */; };
-		45775AE41C338CF000433A89 /* 绿色bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45775ADE1C338CF000433A89 /* 绿色bg@2x.png */; };
-		45775AE51C338CF000433A89 /* 绿色bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45775ADF1C338CF000433A89 /* 绿色bg@3x.png */; };
-		45775AF81C33A7F500433A89 /* ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45775AF71C33A7F500433A89 /* ScoreView.m */; };
 		45FB38871C33DD0900FCDBD0 /* XBScorePlateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FB38851C33DD0900FCDBD0 /* XBScorePlateView.m */; };
 /* End PBXBuildFile section */
 
@@ -34,14 +27,6 @@
 		454897F21C32796300FFFC47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		454897F51C32796300FFFC47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		454897F71C32796300FFFC47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45775ADA1C338CF000433A89 /* 橙色bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "橙色bg@2x.png"; sourceTree = "<group>"; };
-		45775ADB1C338CF000433A89 /* 橙色bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "橙色bg@3x.png"; sourceTree = "<group>"; };
-		45775ADC1C338CF000433A89 /* 红色bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "红色bg@2x.png"; sourceTree = "<group>"; };
-		45775ADD1C338CF000433A89 /* 红色bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "红色bg@3x.png"; sourceTree = "<group>"; };
-		45775ADE1C338CF000433A89 /* 绿色bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绿色bg@2x.png"; sourceTree = "<group>"; };
-		45775ADF1C338CF000433A89 /* 绿色bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绿色bg@3x.png"; sourceTree = "<group>"; };
-		45775AF61C33A7F500433A89 /* ScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreView.h; sourceTree = "<group>"; };
-		45775AF71C33A7F500433A89 /* ScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreView.m; sourceTree = "<group>"; };
 		45FB38851C33DD0900FCDBD0 /* XBScorePlateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBScorePlateView.m; sourceTree = "<group>"; };
 		45FB38861C33DD0900FCDBD0 /* XBScorePlateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBScorePlateView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,14 +88,6 @@
 		45775AD91C338CF000433A89 /* ios(1) */ = {
 			isa = PBXGroup;
 			children = (
-				45775AF61C33A7F500433A89 /* ScoreView.h */,
-				45775AF71C33A7F500433A89 /* ScoreView.m */,
-				45775ADA1C338CF000433A89 /* 橙色bg@2x.png */,
-				45775ADB1C338CF000433A89 /* 橙色bg@3x.png */,
-				45775ADC1C338CF000433A89 /* 红色bg@2x.png */,
-				45775ADD1C338CF000433A89 /* 红色bg@3x.png */,
-				45775ADE1C338CF000433A89 /* 绿色bg@2x.png */,
-				45775ADF1C338CF000433A89 /* 绿色bg@3x.png */,
 			);
 			path = "ios(1)";
 			sourceTree = "<group>";
@@ -172,15 +149,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45775AE01C338CF000433A89 /* 橙色bg@2x.png in Resources */,
 				454897F61C32796300FFFC47 /* LaunchScreen.storyboard in Resources */,
-				45775AE51C338CF000433A89 /* 绿色bg@3x.png in Resources */,
-				45775AE41C338CF000433A89 /* 绿色bg@2x.png in Resources */,
 				454897F31C32796300FFFC47 /* Assets.xcassets in Resources */,
-				45775AE31C338CF000433A89 /* 红色bg@3x.png in Resources */,
-				45775AE11C338CF000433A89 /* 橙色bg@3x.png in Resources */,
 				454897F11C32796300FFFC47 /* Main.storyboard in Resources */,
-				45775AE21C338CF000433A89 /* 红色bg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,7 +162,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45775AF81C33A7F500433A89 /* ScoreView.m in Sources */,
 				45FB38871C33DD0900FCDBD0 /* XBScorePlateView.m in Sources */,
 				454897EE1C32796300FFFC47 /* ViewController.m in Sources */,
 				454897EB1C32796300FFFC47 /* AppDelegate.m in Sources */,
