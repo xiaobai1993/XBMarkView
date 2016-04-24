@@ -44,10 +44,11 @@
 {
     
     __block UIColor * bottomColor;
-   __block UIColor * topColor;
+    __block UIColor * topColor;
     __block int top;
     __block int bottom;
 
+    
     layer = [CAGradientLayer new];
     /**
      * 起点和终点表示的坐标系位置，(0,0)表示左上角，(1,1)表示右下角
@@ -65,6 +66,9 @@
     XBScorePlateView * myview = [[XBScorePlateView alloc]initWithFrame:CGRectMake(40, 60, 232, 232)];
     myview.backgroundColor = [UIColor clearColor];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    
+    //定时器刷新的时候执行的块操作
     
     myview.block = ^{
 

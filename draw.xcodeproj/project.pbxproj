@@ -63,7 +63,6 @@
 			children = (
 				45FB38851C33DD0900FCDBD0 /* XBScorePlateView.m */,
 				45FB38861C33DD0900FCDBD0 /* XBScorePlateView.h */,
-				45775AD91C338CF000433A89 /* ios(1) */,
 				454897E91C32796300FFFC47 /* AppDelegate.h */,
 				454897EA1C32796300FFFC47 /* AppDelegate.m */,
 				454897EC1C32796300FFFC47 /* ViewController.h */,
@@ -83,13 +82,6 @@
 				454897E71C32796300FFFC47 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		45775AD91C338CF000433A89 /* ios(1) */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "ios(1)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
