@@ -8,9 +8,7 @@
 
 #import "XBScorePlateView.h"
 
-#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
-// rgb颜色转换带透明度（16进制->10进制）
-#define UIColorFromRGBA(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:((float)((rgbValue & 0xFF000000) >> 24))/255.0]
+
 
 @interface XBScorePlateView()
 {
@@ -31,8 +29,6 @@
 
 @property (nonatomic,assign) CGFloat cur_compV;//当前的综合分数
 @property (nonatomic,assign) NSTimer * timer;
-
-@property (nonatomic,strong) CAGradientLayer *superLayer;
 @end
 
 @implementation XBScorePlateView
@@ -210,39 +206,8 @@
     d_altitude=self.speedValues/20;
 }
 
-- (void)setSuperViewChange:(BOOL)SuperViewChange
-{
-    if (SuperViewChange==YES&&_SuperViewChange!=YES) {
-        
-        _SuperViewChange=YES;
-        
-        self.superLayer = [CAGradientLayer new];
-        /**
-         * 起点和终点表示的坐标系位置，(0,0)表示左上角，(1,1)表示右下角
-         */
-        self.superLayer.startPoint = CGPointMake(0.5, 0);
-        self.superLayer.endPoint = CGPointMake(0.5, 1);
-        self.superLayer.frame = self.superview.bounds;
-        //设置顶端和底部的渐变颜色
-        UIColor * ct = UIColorFromRGB(0xFFd64537);
-        UIColor * cb = UIColorFromRGB(0xFFf77345);
-        self.superLayer.colors = @[(__bridge id)ct.CGColor,(__bridge id)cb.CGColor];
-        [self.superLayer setNeedsDisplay];
-        [self.superview.layer addSublayer:self.superLayer];
-
-    }
-}
 -(void)update
 {
-    
-    static CGFloat frac=0;//控制当前颜色的进度
-    
-    UIColor * bottomColor;
-    UIColor * topColor;
-    int top;
-    int bottom;
-
-
     _cur_altitudeV+=d_altitude;
     _cur_speedV+=d_speed;
     _cur_compV+=d_comp;
@@ -261,37 +226,12 @@
         [self.timer invalidate];
         self.timer = nil;
     }
-    //self.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
     
-    if (self.SuperViewChange) {
+    if (self.block!=nil) {
         
-        if (_cur_compV<2.0) { //小于2.0的时候不渐变
-            
-            top = [self calculateColor:0xFFd64537 andWithObjColor:0xFFd64537 andWithFraction:frac];
-            
-            bottom = [self calculateColor:0xFFf77345 andWithObjColor:0xFFf77345 andWithFraction:frac];
-        }
-        else if(_cur_compV<4.0) //红色到橙色渐变
-        {
-            top = [self calculateColor:0xFFd64537 andWithObjColor:0xFFF5942C andWithFraction:frac];
-            
-            bottom = [self calculateColor:0xFFf77345 andWithObjColor:0xFFF6B529 andWithFraction:frac];
-        }
-        else//红色到绿色渐变
-        {
-            top = [self calculateColor:0xFFd64537 andWithObjColor:0xFF67B03C andWithFraction:frac];
-            bottom = [self calculateColor:0xFFf77345 andWithObjColor:0xFF8ECB47 andWithFraction:frac];
-        }
-        
-        topColor = UIColorFromRGB(top);
-        bottomColor = UIColorFromRGB(bottom);
-        
-        self.superLayer.colors = @[(__bridge id)topColor.CGColor,(__bridge id)bottomColor.CGColor];
-        [self.superview setNeedsDisplay];
-
+        self.block();
     }
     [self setNeedsDisplay];
-
 }
 
 
